@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: session17-python
-          image: nensiravaliya28/hey-cicd:__IMAGE_TAG__
+          # Must match the repository and tag published by the GitHub Actions push job.
+          image: avishkar74/devsecops-demo:__IMAGE_TAG__
           imagePullPolicy: Always           # pull from Docker Hub
           ports:
             - containerPort: 5001
