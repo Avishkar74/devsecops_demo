@@ -159,6 +159,9 @@ jobs:
       - image-scan
     runs-on: ubuntu-latest
 
+    env:
+      IMAGE_NAME: avishkar74/devsecops-demo
+
     steps:
 
       - name: Checkout code
@@ -177,6 +180,8 @@ jobs:
             -t avishkar74/devsecops-demo:latest \
             .
 
+          echo "Images created:"
+          docker images | grep devsecops-demo
       - name: Push image
         run: |
           docker push avishkar74/devsecops-demo:${{ github.sha }}
