@@ -173,8 +173,8 @@ jobs:
       - name: Build and tag image
         run: |
           docker build \
-            -t nensiravaliya28/hey-cicd:${{ github.sha }} \
-            -t nensiravaliya28/hey-cicd:latest \
+            -t vishkar74/devsecops-demo:${{ github.sha }} \
+            -t avishkar74/devsecops-demo:latest \
             .
 
       - name: Push image
